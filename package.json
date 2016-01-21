@@ -1,0 +1,36 @@
+{
+  "name": "web-auto-test",
+  "version": "0.0.1",
+  "description": "web/mobile automate test setup",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "gulp prepare-binaries",
+    "start": "java -jar lib/selenium-server-standalone.jar -Dwebdriver.chrome.driver=lib/chromedriver",
+    "test": "wdio ./wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adventure-yunfei/web-auto-test.git"
+  },
+  "keywords": [
+    "web-test",
+    "mobile-test",
+    "automate",
+    "test"
+  ],
+  "author": "yunfei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adventure-yunfei/web-auto-test/issues"
+  },
+  "homepage": "https://github.com/adventure-yunfei/web-auto-test#readme",
+  "dependencies": {
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.2.0",
+    "fs-extra": "^0.26.4",
+    "gulp": "^3.9.0",
+    "mocha": "^2.3.4",
+    "progress": "^1.1.8",
+    "webdriverio": "^3.4.0"
+  }
+}
