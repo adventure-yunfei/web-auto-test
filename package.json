@@ -27,14 +27,12 @@
   "dependencies": {
     "chai": "^3.4.1",
     "chai-as-promised": "^5.2.0",
+    "confirm-simple": "^1.0.3",
     "fs-extra": "^0.26.4",
     "gulp": "^3.9.0",
+    "gulp-task-listing": "^1.0.1",
     "mocha": "^2.3.4",
     "progress": "^1.1.8",
     "webdriverio": "^3.4.0"
-  },
-  "devDependencies": {
-    "confirm-simple": "^1.0.3",
-    "gulp-task-listing": "^1.0.1"
   }
 }
