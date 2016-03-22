@@ -32,5 +32,9 @@
     "mocha": "^2.3.4",
     "progress": "^1.1.8",
     "webdriverio": "^3.4.0"
+  },
+  "devDependencies": {
+    "confirm-simple": "^1.0.3",
+    "gulp-task-listing": "^1.0.1"
   }
 }
