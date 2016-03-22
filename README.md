@@ -12,13 +12,45 @@ Set up a automate-testing framework for web.
 
 # How to use it?
 
-1. First `npm install` to install package (and it'll start downloading binaries: selenium standalone and chromedriver).
+- First `npm install` to install package (and it'll start downloading binaries (by gulp task "prepare-binaries"): selenium standalone and chromedriver).
 If want to use customized binaries and avoid downloading, just copy to following path before run `npm install`:
     - `lib/selenium-server-standalone.jar` for selenium server standalone
     - `lib/chromedriver` for chromedriver
 
-2. `npm start` to start selenium server
-3. (On another terminal) `npm test` to run all test cases defined under `test/`
+- `npm start` to start selenium server
+- `npm test` to run all test cases defined under `test/`
+
+### Use it as a npm package:
+
+Much similar as using it directly:
+
+- `npm install web-auto-test -g` to install and download binaries (or manually download it like mentioned before)
+- Create your own webdriverio config file:
+
+```
+// your.wdio.config.js
+exports.config = Object.assign(
+    require('web-auto-test').config, // base config
+    {
+        // ... put your config here
+    }
+);
+```
+
+- `web-auto-test start` to start selenium server
+- `web-auto-test test <webdriverio config file>` to run tests using specified config file
+
+You may also install it as local package and config npm script to run it:
+
+```
+// package.json
+{
+    "scripts": {
+        "start": "web-auto-test start",
+        "test": "web-auto-test test"
+    }
+}
+```
 
 # Write test
 
